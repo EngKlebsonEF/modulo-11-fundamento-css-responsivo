@@ -1,0 +1,362 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2, h3 {
+    margin: 8px;
+}
+
+h2 {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(40, 24, 185);
+    padding: 10px;
+    text-align: center;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container > h2 {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: rgb(230, 165, 27);
+    padding-top: 8px;
+    color: #fff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header > .container,
+footer > .container {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+nav {
+    background-color: rgb(184, 18, 18);
+    padding: 16px 0;
+    display: none;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 16px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-hamburguer {
+    width: 32px;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.container-flex {
+    display: flex;
+}
+
+.sobre-loja-imagem img {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+}
+
+.sobre-loja-texto {
+    flex-basis: 100%;
+    padding: 0 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.produtos > h2 {
+    text-align: center;
+    width: auto;
+}
+
+.produto {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.botao-adicionar {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgb(184, 18, 18);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 16px;
+}
+
+.botao-adicionar:hover {
+    background-color: rgb(230, 165, 27);
+}
+
+p {
+    text-align: justify;
+    padding: 6px 6px;
+}
+
+.feedback-icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-image: url('./img/checklist.png');
+    background-size: cover;
+
+}
+
+.feedback-icon.show-feedback {
+    display: inline-block;
+}
+
+.carrinho-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.carrinho-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.carrinho-tabela th {
+    background-color: rgb(40, 24, 185);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.carrinho-tabela td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.carrinho-tabela td img {
+    max-width: 80px;
+}
+
+.carrinho-tabela td h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.carrinho-tabela td p {
+    font-size: 14px;
+}
+
+.carrinho-tabela td .remover-item {
+    color: red;
+    cursor: pointer;
+}
+
+.remover-item {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #f44336;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0;
+}
+
+.remover-item:hover {
+    background-color: #d32f2f;
+}
+
+@media (min-width: 770px) and (max-width: 820px) {
+    .container,
+    .sobre-loja-imagem,
+    .sobre-loja-texto {
+        display: block;
+        max-width: 90%;
+        font-size: 1em;
+        margin-bottom: 32px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        max-width: 820px;
+        margin: 0 auto;
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    footer {
+        padding: 2px;
+        font-size: 14x;
+    }
+
+    .menu-hamburguer span {
+        display: none;
+    }
+
+    nav {
+        background-color: rgb(184, 18, 18);
+        padding: 15px 0;
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    header .container,
+    header .container-flex,
+    footer .container {
+        flex-direction: column;
+    }
+
+    .container-flex {
+        max-width: 90%;
+    }
+    
+    .sobre-loja-imagem img {
+        max-width: 90%;
+        display: block;
+    }
+    
+    .sobre-loja-texto {
+        flex-basis: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 20px;
+    }
+
+    .container {
+        display: block;
+        max-width: 90%;
+    }
+    
+    .container > h2 {
+        max-width: 90%;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav li {
+        list-style: none;
+        display: block;
+        margin: 10px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .produtos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .menu-hamburguer span {
+        display: none;
+    }
+
+    nav {
+        background-color: rgb(184, 18, 18);
+        padding: 3px 0;
+        display: block;
+    }
+
+    div h1 {
+        text-align: center;
+    }
+
+    footer {
+        padding: 2px;
+        font-size: 10px;
+    }
+}
